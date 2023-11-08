@@ -10,12 +10,15 @@ import java.text.MessageFormat;
  */
 @Getter
 public class BusinessException extends RuntimeException{
+    private String code ;
 
-    private final BusinessExceptionEnum exceptionEnum;
+    private String message ;
+
 
     public BusinessException(BusinessExceptionEnum exceptionEnum){
         super(exceptionEnum.getMessage());
-        this.exceptionEnum = exceptionEnum ;
+        this.code = exceptionEnum.getCode() ;
+        this.message = exceptionEnum.getMessage() ;
     }
 
     /**
@@ -29,6 +32,6 @@ public class BusinessException extends RuntimeException{
 
     @Override
     public String toString() {
-        return MessageFormat.format("{0} {1}",this.exceptionEnum.getCode(),this.exceptionEnum.getMessage());
+        return MessageFormat.format("{0} {1}",this.getCode(),this.getMessage());
     }
 }

@@ -7,7 +7,7 @@
     ```
 3. 使用idea自带的http工具编写controller测试脚本
 4. gateway项目添加启动参数打印请求日志：-Dreactor.netty.http.server.accessLogEnabled=true
-5. 自定义异常不打印堆栈信息,优化性能重写fillInStackTrace方法
+5. 自定义异常不打印堆栈信息,优化性能自定义异常的fillInStackTrace方法
    ```text
    @Override
     public synchronized Throwable fillInStackTrace() {

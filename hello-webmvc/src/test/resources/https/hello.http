@@ -3,8 +3,9 @@ Content-Type: application/json
 
 {}
 
-###
-POST http://localhost:80/api/item
+
+### 用户注册
+POST http://localhost:8001/webmvc/hello/register
 Content-Type: application/x-www-form-urlencoded
 
 id=99&content=new-element
