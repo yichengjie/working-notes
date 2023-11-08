@@ -1,4 +1,4 @@
-package com.yicj.study.webmvc.aspect;
+package com.yicj.study.common.aspect;
 
 import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 @Aspect
 @Component
 public class LogAspect {
+
     @Pointcut("execution(public * com.yicj.study..*Controller.*(..))")
     public void controllerPointcut() {
     }
