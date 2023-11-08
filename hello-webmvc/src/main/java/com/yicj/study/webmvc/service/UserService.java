@@ -7,4 +7,6 @@ package com.yicj.study.webmvc.service;
 public interface UserService {
 
     long count() ;
+
+    String register(String username) ;
 }
