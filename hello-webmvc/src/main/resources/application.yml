@@ -2,3 +2,15 @@ server:
   port: 8001
   servlet:
     context-path: /webmvc
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test
+    username: root
+    password: root
+logging:
+  level:
+    root: info
+    com.yicj.study.webmvc.repository.mapper.UserMapper: debug
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
