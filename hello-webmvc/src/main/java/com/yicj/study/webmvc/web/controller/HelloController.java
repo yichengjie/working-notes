@@ -1,5 +1,6 @@
 package com.yicj.study.webmvc.web.controller;
 
+import com.yicj.study.common.utils.SnowUtil;
 import com.yicj.study.webmvc.web.request.UserSaveRequest;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public class HelloController {
 
     @PostMapping("/register")
     public String register(@Valid UserSaveRequest request){
-
-        return "success" ;
+        String id = SnowUtil.getSnowflakeNextIdStr();
+        return id ;
     }
 }
