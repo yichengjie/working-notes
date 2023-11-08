@@ -6,3 +6,4 @@
     log.info("启动成功：\thttp://127.0.0.1:{}", env.getProperty("server.port"));
     ```
 3. 使用idea自带的http工具编写controller测试脚本
+4. gateway项目添加启动参数打印请求日志：-Dreactor.netty.http.server.accessLogEnabled=true
